@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick Roll 彩蛋</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            position: relative; /* 为底部定位提供基准 */
+        }
+
+        .button {
+            padding: 20px 40px;
+            font-size: 24px;
+            background-color: #ff4444;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ff0000;
+            transform: scale(1.1);
+        }
+
+        .button:active {
+            transform: scale(0.95);
+        }
+
+        /* 新增作者信息样式 */
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 14px;
+            font-family: 'Microsoft YaHei', sans-serif;
+            pointer-events: none; /* 防止遮挡按钮操作 */
+        }
+    </style>
+</head>
+<body>
+    <button class="button" onclick="rickroll()">点击有惊喜！</button>
+    
+    <!-- 新增作者信息 -->
+    <div class="footer">
+        <p>开发者：Nachi奶茶 | 联系方式：3863076512@qq.com</p>
+        <p>© 2025 版权所有，仅供学习交流使用</p>
+    </div>
+
+    <script>
+        function rickroll() {
+            window.location.href = "https://www.bilibili.com/video/BV1GJ411x7h7/";
+        }
+    </script>
+</body>
+</html>
